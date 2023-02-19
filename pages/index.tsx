@@ -7,14 +7,19 @@ import { LocomotiveScrollProvider } from "react-locomotive-scroll";
 import "locomotive-scroll/dist/locomotive-scroll.css";
 import { useRef } from "react";
 import Business from "../components/Business";
+import { useAnimation } from "framer-motion";
+import Services from "../components/Services";
+import Team from "../components/Team";
+import Footer from "../components/Footer";
+import FooterLast from "../components/FooterLast";
 
 const Home: NextPage = () => {
   const containerRef = useRef(null);
+
   return (
     <div>
       <Head>
         <title>NMG Official Website</title>
-
         <link rel="icon" href="/favicon.ico" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
@@ -24,19 +29,21 @@ const Home: NextPage = () => {
         />
       </Head>
       <LocomotiveScrollProvider
-        options={
-          {
-            // smooth: true,
-          }
-        }
+        options={{
+          smooth: true,
+        }}
         watch={[]}
         containerRef={containerRef}
       >
         <main data-scroll-container ref={containerRef}>
           <Navbar />
-          <div className="data-scroll-section">
+          <div data-scroll-section>
             <Hero />
             <Business />
+            <Services />
+            <Team />
+            <Footer />
+            <FooterLast />
           </div>
         </main>
       </LocomotiveScrollProvider>

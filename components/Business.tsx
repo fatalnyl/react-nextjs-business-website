@@ -41,17 +41,27 @@ const Business = () => {
   }, [inView]);
 
   return (
-    <div className="w-full h-screen bg-white">
-      <div className="w-full h-full bg-[#f9f9fc]rounded-tl-[100px] relative">
+    <div ref={ref} className="w-full h-screen bg-white">
+      <div className="w-full h-full rounded-tl-[100px] relative bg-[#F9F9FC]">
         <div className="pt-10">
           <div className="flex flex-col items-center justify-center gap-4">
-            <div className="pb-2 text-3xl left-[5%]">
+            <div
+              data-scroll
+              data-scroll-speed="-6"
+              data-scroll-direction="horizontal"
+              className="pb-2 text-3xl left-[5%]"
+            >
               <h2>Our Business</h2>
             </div>
-            <p className="py-2">The NMG Group is made up of 3 core business.</p>
+            <p className="py-2">
+              The NMG Group is made up of three core business
+            </p>
           </div>
           <div className="w-[90%] md:w-[70%] md:mx-auto flex justify-between items-center gap-2 md:gap-4 pt-6">
-            <div className="bg-white w-[130px] md:w-[300px] h-[350px] rounded-xl shadow-xl shadow-gray-300 flex flex-col justify-center items-center p-4">
+            <motion.div
+              animate={animationX}
+              className="bg-white w-[130px] md:w-[300px] h-[350px] rounded-xl shadow-xl shadow-gray-300 flex flex-col justify-center items-center p-4"
+            >
               <div>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -219,13 +229,13 @@ const Business = () => {
                 </svg>
               </div>
               <div>
-                <h1 className="pt-6 pb-2 text-center md:text-xl text-sm">
+                <h1 className="pt-6 pb-2 text-sm text-center md:text-xl">
                   NMG Consulting
                 </h1>
               </div>
               <div>
                 <p className="pb-4 text-sm text-center">
-                  A specialist consultency focused on the insurance.
+                  A specialist consultency focused on the insurance
                 </p>
               </div>
               <div>
@@ -233,8 +243,11 @@ const Business = () => {
                   Read More
                 </button>
               </div>
-            </div>
-            <div className="bg-white w-[130px] md:w-[300px] h-[350px] rounded-xl shadow-xl shadow-gray-300 flex flex-col justify-center items-center p-4">
+            </motion.div>
+            <motion.div
+              animate={animationZ}
+              className="bg-white w-[130px] md:w-[300px] h-[350px] rounded-xl shadow-xl shadow-gray-300 flex flex-col justify-center items-center p-4"
+            >
               <div>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -300,22 +313,25 @@ const Business = () => {
                 </svg>
               </div>
               <div>
-                <h1 className="pt-6 pb-2 text-center md:text-xl text-sm">
-                  NMG Benefits
+                <h1 className="pt-6 pb-2 text-sm text-center md:text-xl">
+                  NMG Benefilts
                 </h1>
               </div>
               <div>
-                <p className="pb-4 text-sm text-center">
+                <p className="pb-4 text-sm text-center md:text-xl">
                   A Employee benefilt consulting and administration.
                 </p>
               </div>
               <div>
-                <button className="pb-2 text-red-600 underline">
+                <button className="pb-4 text-red-600 underline">
                   Read More
                 </button>
               </div>
-            </div>
-            <div className="bg-white w-[130px] md:w-[300px] h-[350px] rounded-xl shadow-xl shadow-gray-300 flex flex-col justify-center items-center p-4">
+            </motion.div>
+            <motion.div
+              animate={animationY}
+              className="bg-white w-[130px] md:w-[300px] h-[350px] rounded-xl shadow-xl shadow-gray-300 flex flex-col justify-center items-center p-4"
+            >
               <div>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -410,7 +426,7 @@ const Business = () => {
                 </svg>
               </div>
               <div>
-                <h1 className="pt-6 pb-2 text-center md:text-xl text-sm">
+                <h1 className="pt-6 pb-2 text-sm text-center md:text-xl">
                   NMG Capital
                 </h1>
               </div>
@@ -424,17 +440,21 @@ const Business = () => {
                   Read More
                 </button>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
-        <div className="absolute top-[-40px] left-[180px] md:top[-4px] md:left-[700px] lg:top-[-40px] lg:left-[700px]">
+        <motion.div
+          animate={animationX}
+          className="absolute top-[-40px] left-[180px] md:top[-40px] md:left-[700px] lg:top-[-40px] lg:left-[700px]"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="57.753"
             height="68.729"
             viewBox="0 0 57.753 68.729"
           >
-            <path
+            <motion.path
+              animate={pathAnimation}
               id="Path_28"
               data-name="Path 28"
               d="M427.716,839.841s-7.06,37.653,34.123,40.006c17.05.974,15.906-8.584,11.461-11.49-8.277-4.022-25.408,2.535-11.461,22.757A34.61,34.61,0,0,0,480.426,903.8"
@@ -445,8 +465,11 @@ const Business = () => {
               stroke-width="4"
             />
           </svg>
-        </div>
-        <div className="ansolute top-[20px] left-[235px] md:top-[20px] md:left-[755px] lg:top-[20px] lg:left-[755px]">
+        </motion.div>
+        <motion.div
+          animate={animationZ}
+          className="absolute top-[20px] left-[235px] md:top-[20px] md:left-[755px] lg:top-[20px] lg:left-[755px]"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="22.243"
@@ -465,8 +488,11 @@ const Business = () => {
               stroke-width="4"
             />
           </svg>
-        </div>
-        <div className="absolute top-[-50px] left-[180px] md:top-[-50px] md:left-[700px] lg:top[-50px] lg:left-[700px]">
+        </motion.div>
+        <motion.div
+          animate={animationY}
+          className="absolute top-[-50px] left-[180px] md:top-[-50px] md:left-[700px] lg:top-[-50px] lg:left-[700px]"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="6"
@@ -475,6 +501,345 @@ const Business = () => {
           >
             <circle id="Ellipse_6" data-name="Ellipse 6" cx="3" cy="3" r="3" />
           </svg>
+        </motion.div>
+        <div className="w-[90%] mx-auto h-[220px] bg-[#C61526] rounded-xl text-white mt-8 relative">
+          <div className="absolute z-40 flex flex-col items-center justify-center px-4 text-center md:pl-[400px] pt-[20px] md:pt-[50px]">
+            <div className="pb-4 text-2xl">
+              <h1>Celebrating 25 years of NMG</h1>
+            </div>
+            <div className="pb-4">
+              <p>
+                This year NMG celebrates 25 years in business. There is much we
+                can be proud of, a lot of achievements over the last
+                quarter-century.
+              </p>
+            </div>
+            <div className="p-2 border-2 border-wide rounded-xl">
+              <button>More Info</button>
+            </div>
+          </div>
+          <div className="absolute top-0 right-[500px] z-30 opacity-50">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="208"
+              height="208"
+              viewBox="0 0 208 208"
+            ></svg>
+          </div>
+          <div className="absolute top-20 right-[40px] z-30 opacity-50">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="208"
+              height="208"
+              viewBox="0 0 208 208"
+            >
+              <circle
+                id="Ellipse_10"
+                data-name="Ellipse 10"
+                cx="104"
+                cy="104"
+                r="104"
+                fill="#fff"
+                opacity="0.1"
+              />
+            </svg>
+          </div>
+          <div className="absolute top-[-10px] left-[10px] z-30 opacity-50">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="69"
+              height="69"
+              viewBox="0 0 69 69"
+            >
+              <circle
+                id="Ellipse_11"
+                data-name="Ellipse 11"
+                cx="34.5"
+                cy="34.5"
+                r="34.5"
+                fill="#fff"
+                opacity="0.1"
+              />
+            </svg>
+          </div>
+          <div className="absolute top-[10px] left-[10px] z-30 opacity-50">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="234.363"
+              height="171.24"
+              viewBox="0 0 234.363 171.24"
+            >
+              <g
+                id="Group_23"
+                data-name="Group 23"
+                transform="translate(-113.706 -1648.591)"
+              >
+                <path
+                  id="Path_43"
+                  data-name="Path 43"
+                  d="M138.738,342.766a8.67,8.67,0,0,1,1.664,7.041c7.716-1.1,12.481-2.769,19.34-5.646a16.573,16.573,0,0,0-1.9-8.7C151.365,340.11,146.425,341.464,138.738,342.766Z"
+                  transform="translate(35.199 1439.725)"
+                  fill="#ffaf00"
+                />
+                <path
+                  id="Path_57"
+                  data-name="Path 57"
+                  d="M270.748,420.542c1.99.826,3.64.433,6.32-.3-1.829-5.783-2.042-12.469-1.566-20.234a9.2,9.2,0,0,1-5.966-.61C268.544,407.578,268.706,412.244,270.748,420.542Z"
+                  transform="translate(-155.239 1390.996)"
+                  fill="#ffe853"
+                />
+                <path
+                  id="Path_65"
+                  data-name="Path 65"
+                  d="M325.521,336.407a9.121,9.121,0,0,1-3.515-6.749c-7.584,3.114-12.009,6.052-18.259,10.753a17.444,17.444,0,0,0,4.186,8.376C313.335,342.381,318.021,339.721,325.521,336.407Z"
+                  transform="translate(-89.347 1318.933)"
+                  fill="#00d339"
+                />
+                <path
+                  id="Path_73"
+                  data-name="Path 73"
+                  d="M321.737,335.234a7.535,7.535,0,0,1-2.9-5.576,60.781,60.781,0,0,0-15.085,8.884,14.412,14.412,0,0,0,3.459,6.92C311.669,340.169,315.54,337.972,321.737,335.234Z"
+                  transform="matrix(-0.259, 0.966, -0.966, -0.259, 745.11, 1594.379)"
+                  fill="#00d339"
+                />
+                <path
+                  id="Path_70"
+                  data-name="Path 70"
+                  d="M549.63,319.407a6.857,6.857,0,0,1,1.08,5.614,55.31,55.31,0,0,0,15.45-3.815,13.1,13.1,0,0,0-1.212-6.928C559.683,317.729,555.74,318.635,549.63,319.407Z"
+                  transform="translate(-472.268 1736.131) rotate(-30)"
+                  fill="#ff41aa"
+                />
+                <path
+                  id="Path_71"
+                  data-name="Path 71"
+                  d="M214,398.109c1.2-7.554,2.263-11.365,6.281-16.463-2.754-1.285-4.263-2.5-4.93-4.352-4.71,5.212-6.609,9.768-8.587,17.674A15.059,15.059,0,0,0,214,398.109Z"
+                  transform="translate(42.801 1399.893)"
+                  fill="#82c4f2"
+                />
+              </g>
+            </svg>
+          </div>
+          <div className="absolute top-[10px] right-[20px] z-30 opacity-50">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="234.363"
+              height="171.24"
+              viewBox="0 0 234.363 171.24"
+            >
+              <g
+                id="Group_24"
+                data-name="Group 24"
+                transform="translate(-113.706 -1648.591)"
+              >
+                <path
+                  id="Path_43"
+                  data-name="Path 43"
+                  d="M138.738,342.766a8.67,8.67,0,0,1,1.664,7.041c7.716-1.1,12.481-2.769,19.34-5.646a16.573,16.573,0,0,0-1.9-8.7C151.365,340.11,146.425,341.464,138.738,342.766Z"
+                  transform="translate(75.663 1458.56)"
+                  fill="#ffaf00"
+                />
+                <path
+                  id="Path_57"
+                  data-name="Path 57"
+                  d="M270.748,420.542c1.99.826,3.64.433,6.32-.3-1.829-5.783-2.042-12.469-1.566-20.234a9.2,9.2,0,0,1-5.966-.61C268.544,407.578,268.706,412.244,270.748,420.542Z"
+                  transform="translate(-155.239 1390.996)"
+                  fill="#ffe853"
+                />
+                <path
+                  id="Path_65"
+                  data-name="Path 65"
+                  d="M325.521,336.407a9.121,9.121,0,0,1-3.515-6.749c-7.584,3.114-12.009,6.052-18.259,10.753a17.444,17.444,0,0,0,4.186,8.376C313.335,342.381,318.021,339.721,325.521,336.407Z"
+                  transform="translate(-89.347 1318.933)"
+                  fill="#00d339"
+                />
+                <path
+                  id="Path_73"
+                  data-name="Path 73"
+                  d="M321.737,335.234a7.535,7.535,0,0,1-2.9-5.576,60.781,60.781,0,0,0-15.085,8.884,14.412,14.412,0,0,0,3.459,6.92C311.669,340.169,315.54,337.972,321.737,335.234Z"
+                  transform="matrix(-0.259, 0.966, -0.966, -0.259, 745.11, 1594.379)"
+                  fill="#00d339"
+                />
+                <path
+                  id="Path_70"
+                  data-name="Path 70"
+                  d="M549.63,319.407a6.857,6.857,0,0,1,1.08,5.614,55.31,55.31,0,0,0,15.45-3.815,13.1,13.1,0,0,0-1.212-6.928C559.683,317.729,555.74,318.635,549.63,319.407Z"
+                  transform="translate(-472.268 1736.131) rotate(-30)"
+                  fill="#ff41aa"
+                />
+                <path
+                  id="Path_71"
+                  data-name="Path 71"
+                  d="M214,398.109c1.2-7.554,2.263-11.365,6.281-16.463-2.754-1.285-4.263-2.5-4.93-4.352-4.71,5.212-6.609,9.768-8.587,17.674A15.059,15.059,0,0,0,214,398.109Z"
+                  transform="translate(47.801 1344.683)"
+                  fill="#82c4f2"
+                />
+              </g>
+            </svg>
+          </div>
+
+          <div className="absolute top-[30px] right-[20px] z-30 opacity-50">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="51.203"
+              height="45.026"
+              viewBox="0 0 51.203 45.026"
+            >
+              <g
+                id="Group_27"
+                data-name="Group 27"
+                transform="translate(1.036 1.028)"
+              >
+                <path
+                  id="Path_76"
+                  data-name="Path 76"
+                  d="M126.648,427.465l10.015,2.411a3.457,3.457,0,0,0,3.946-1.908h0a3.456,3.456,0,0,0-1.788-4.636l-11.141-4.723a10.054,10.054,0,0,0-5.589-.658l-10.33,1.735a4.267,4.267,0,0,1-.856.055l-.863-.031"
+                  transform="translate(-110.042 -395.464)"
+                  fill="none"
+                  stroke="#c61526"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+                <path
+                  id="Path_77"
+                  data-name="Path 77"
+                  d="M141.092,431.035l13.428-3.3a3.723,3.723,0,0,1,4.467,2.593h0a3.724,3.724,0,0,1-2.072,4.427l-15.274,6.764a12.048,12.048,0,0,1-7.521.739L116.933,438.4a14.707,14.707,0,0,0-3.319-.358l-3.572.022"
+                  transform="translate(-110.042 -399.571)"
+                  fill="none"
+                  stroke="#c61526"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+                <path
+                  id="Path_78"
+                  data-name="Path 78"
+                  d="M155.169,381.166c-12.431-7.749-17.719,12.06,0,18.647C172.888,393.226,167.6,373.418,155.169,381.166Z"
+                  transform="translate(-124.152 -379.396)"
+                  fill="#c61526"
+                  stroke="#c61526"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+                <g
+                  id="Group_26"
+                  data-name="Group 26"
+                  transform="translate(26.672 5.84)"
+                >
+                  <line
+                    id="Line_4"
+                    data-name="Line 4"
+                    y2="8.69"
+                    transform="translate(4.345 0.046)"
+                    fill="none"
+                    stroke="#fff"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
+                  <line
+                    id="Line_5"
+                    data-name="Line 5"
+                    x1="8.69"
+                    transform="translate(0 4.345)"
+                    fill="none"
+                    stroke="#fff"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
+                  <line
+                    id="Line_6"
+                    data-name="Line 6"
+                    y2="8.69"
+                    transform="translate(4.345)"
+                    fill="none"
+                    stroke="#fff"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
+                </g>
+              </g>
+            </svg>
+          </div>
+          <div className="absolute top-[10px] right-[200px] z-30 opacity-50">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="46.984"
+              height="46.984"
+              viewBox="0 0 46.984 46.984"
+            >
+              <g
+                id="Group_42"
+                data-name="Group 42"
+                transform="translate(-813.415 -2793.774)"
+              >
+                <g
+                  id="Group_28"
+                  data-name="Group 28"
+                  transform="translate(816.415 2796.774)"
+                >
+                  <path
+                    id="Path_81"
+                    data-name="Path 81"
+                    d="M407.184,421.909l9.834,9.834a4.021,4.021,0,0,1,0,5.687h0a4.021,4.021,0,0,1-5.687,0L401.5,427.6"
+                    transform="translate(-375.211 -395.623)"
+                    fill="#c61526"
+                    stroke="#c61526"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
+                </g>
+                <path
+                  id="Path_83"
+                  data-name="Path 83"
+                  d="M372.482,414.378v11.246A17,17,0,0,1,367,421.944c-.048-.048-.088-.088-.129-.135v-7.43Z"
+                  transform="translate(454.42 2404.026)"
+                  fill="none"
+                  stroke="#c61526"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+                <path
+                  id="Path_84"
+                  data-name="Path 84"
+                  d="M381.555,400.983V421.8a17.054,17.054,0,0,1-5.61-1.292V400.983Z"
+                  transform="translate(450.957 2409.138)"
+                  fill="none"
+                  stroke="#c61526"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+                <path
+                  id="Path_85"
+                  data-name="Path 85"
+                  d="M390.627,408.151v15.793a16.892,16.892,0,0,1-5.609.6V408.151Z"
+                  transform="translate(447.494 2406.402)"
+                  fill="none"
+                  stroke="#c61526"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+                <path
+                  id="Path_86"
+                  data-name="Path 86"
+                  d="M399.7,393.333v22.195a16.82,16.82,0,0,1-5.61,2.761V393.333Z"
+                  transform="translate(444.031 2412.059)"
+                  fill="none"
+                  stroke="#c61526"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+              </g>
+            </svg>
+          </div>
         </div>
       </div>
     </div>
